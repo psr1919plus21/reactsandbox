@@ -8,7 +8,13 @@ export default class Header extends Component {
     user: PropTypes.shape({
       name: PropTypes.string.isRequired,
       age: PropTypes.number.isRequired
-    }).isRequired
+    }).isRequired,
+    users: PropTypes.arrayOf(
+      PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        age: PropTypes.number.isRequired
+      })
+    )
   };
 
   render() {
