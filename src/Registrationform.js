@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import './Registrationform.css';
 
 export default class Registrationform extends Component {
   constructor(props) {
@@ -22,6 +23,7 @@ export default class Registrationform extends Component {
     return (
       <form onSubmit={this.handleSubmit.bind(this)}>
         <input
+          className="registration-input"
           type="email"
           placeholder="email"
           value={this.state.email}
