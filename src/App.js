@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Header from './Header';
 import Registrationform from './Registrationform';
+import Refs from './Refs';
 import './App.css';
 
 
@@ -36,6 +37,7 @@ export default class App extends Component {
       <div className="container">
         <Header items={menu} type={'video'} user={currentUser} users={users} />
         <Registrationform />
+        <Refs / >
       </div>
     )
   }
