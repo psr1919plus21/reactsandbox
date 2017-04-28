@@ -1,22 +1,21 @@
 import React, {Component} from 'react';
 import Header from './Header';
-import Registrationform from './Registrationform';
-import Refs from './Refs';
-import Contacts from './Contacts';
 import './App.css';
-import {Route, BrowserRouter, Switch} from 'react-router';
-
-
 
 const menu = [
   {
-    link: '/refs',
-    label: 'Refs'
+    link: '/articles',
+    label: 'Articles'
+  },
+  {
+    link: '/posts',
+    label: 'Posts'
   },
   {
     link: '/contacts',
     label: 'Contacts'
   }
+
 ];
 
 const currentUser = {
@@ -28,17 +27,12 @@ const currentUser = {
 const users = [currentUser, currentUser, currentUser];
 
 
-
-export default class App extends Component {
+export default class Contacts extends Component {
   render () {
     return (
       <div className="container">
         <Header items={menu} type={'video'} user={currentUser} users={users} />
-        <Registrationform />
-        <div>
-          <Route path="/refs" component={Refs} />
-          <Route path="/contacts" component={Contacts} />
-        </div>
+        <h1>Contacts</h1>
       </div>
     )
   }
